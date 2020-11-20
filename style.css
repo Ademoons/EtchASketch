@@ -1,44 +1,56 @@
 .container {
     display: grid;
-    grid-template: 30% 70% / 70% 30%;
-    grid-area: 
-        "header header"
-        "container navbar";
+    grid-template-columns: minmax(650px, 75%), minmax(150px, 25%);
+    place-items: center;
     justify-items: center;
     align-items: center;
-    column-gap: 10px;
-    row-gap: 15px;    
-}
-
-.title {
-
 }
 
 :root {
     --grid-columns: 1;
     --grid-rows: 1;
+    background: wheat;
   }
 
 .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
+    min-width: 30px;
+    min-height: 30px;
+}
+
 
 #etcha {
-    background: azure;
-    height: 500px;
-    width: 660px;
-    grid-column-start: 1;
-    grid-row-start: 2;
     display: grid;
-    grid-gap: 1em;
+    place-items: center;
+    border-style: dashed;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-column: 1 / 2;
+    grid-row-start: 1;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-columns), 1fr);    
-
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    min-height: 85vh;
+    min-width: 85vh;
+    max-height: 85vh;
+    max-width: 85vh;
+    background-color: wheat;
+    border: 3px solid orange;
+    grid-gap: 1px;
 }
 
 .navigation {
+    background: skyblue;
+    border: 3px solid orange;
+    height: 90vh;
+    width: 50vh;
+    display: grid;
     grid-column-start: 2;
-    grid-row-start: 2;
+    place-items: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.navi-items {
+    display: grid;
+    place-items: center;
 }
