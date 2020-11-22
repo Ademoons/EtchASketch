@@ -1,9 +1,13 @@
+body {
+    height: 100vh;
+  }
+
 .container {
     display: grid;
-    grid-template-columns: minmax(650px, 75%), minmax(150px, 25%);
+    grid-template-columns: minmax(750px, 75%), minmax(250px, 25%);
     place-items: center;
     justify-items: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 :root {
@@ -12,15 +16,8 @@
     background: wheat;
   }
 
-.grid-item {
-    min-width: 30px;
-    min-height: 30px;
-}
-
-
 #etcha {
     display: grid;
-    place-items: center;
     border-style: dashed;
     align-content: stretch;
     justify-items: stretch;
@@ -29,10 +26,11 @@
     grid-row-start: 1;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    min-height: 85vh;
-    min-width: 85vh;
-    max-height: 85vh;
-    max-width: 85vh;
+    min-height: 90vh;
+    min-width: 90vh;
+    max-height: 90vh;
+    max-width: 90vh;
+    overflow: hidden;
     background-color: wheat;
     border: 3px solid orange;
     grid-gap: 1px;

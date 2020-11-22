@@ -51,8 +51,8 @@ function randomNumber() {
   }
   
   function cellColor(e) {
-    return e.target.style.background = `rgb(${randomNumber()}, 
-      ${randomNumber()}, ${randomNumber()}) `;
+    return e.target.style.background = `rgba(${randomNumber()}, 
+      ${randomNumber()}, ${randomNumber()}, 0.5) `;
   }
 
   makeRows(16, 16);
